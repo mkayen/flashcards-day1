@@ -11,5 +11,10 @@ app.controller('FlashCardController', function($scope){
 	        { text: 'Some kind of fish, right?', correct: false }
 	    ]
 	};
+  
+	$scope.answerQuestion = function (answer) {
+		console.log(answer);
+	};
+
 	scope = $scope.flashCard //For Debugging
 });
