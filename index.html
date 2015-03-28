@@ -11,7 +11,24 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
 
     </head>
-    <body ng-app="FlashCards">
-    	{{ 2+2 }}
+    <body>
+
+    	<div ng-app="FlashCards">
+    		<div class="flash-card" ng-controller="FlashCardController">
+    				<h1>{{ flashCard.question }}</h1>
+    			<ul class="flash-card-answers">
+        			<li class="flash-card-answer">
+            			{{ flashCard.answers[0].text }}
+        			</li>
+        			<li class="flash-card-answer">
+            			{{ flashCard.answers[1].text }}
+       			 	</li>
+        			<li class="flash-card-answer">
+            			{{ flashCard.answers[2].text }}
+        			</li>
+			    </ul>
+			</div>
+   		</div>
+
     </body>
 </html>
