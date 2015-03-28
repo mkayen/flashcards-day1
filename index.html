@@ -13,14 +13,18 @@
     </head>
     <body>
 
-    	<div ng-app="FlashCards">
+    	<div ng-app="FlashCards" ng-controller="MainController">
     		<div class="flash-card" ng-controller="FlashCardController">
-    				<h1>{{ flashCard.question }}</h1>
+    				<h1>{{ flashCards[1].question }}</h1>
     			<ul class="flash-card-answers">
         			<li class="flash-card-answer" ng-repeat="answer in flashCard.answers" ng-click="answerQuestion(answer)">
             			{{ answer.text }}
-        			</li>
-			    </ul>
+                    </li>
+                </ul>
+                <h2 class="answer-feedback" ng-show="answered">
+                    <span ng-show="answeredCorrectly">Yeah, you got it right!</span>
+                    <span ng-show="!answeredCorrectly">Nope, you got it wrong.</span>
+                </h2>
 			</div>
    		</div>
 
